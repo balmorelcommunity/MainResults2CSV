@@ -28,7 +28,7 @@ The following software is needed to run the script:
 - Install anaconda/miniconda with python 3.7 (https://docs.conda.io/en/latest/miniconda.html)
 - Open the anaconda promt
 - Navigate to the mainresults_2_gdx folder using the "cd" command and the "tab" key.
-- Create a new environment from the environment.yml file (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+- Create a new environment from the environment.yml file [conda instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
 	> Run: conda env create -f environment.yml
 
 ### pip
