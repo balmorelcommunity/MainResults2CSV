@@ -27,7 +27,6 @@ Philipp Andreas Gunkel (DTU).
 #
 
 # importing required packages and modules (keep order)
-import os
 import config
 import datetime
 import glob
@@ -43,10 +42,6 @@ pr_name = config.project_name
 # directory to the input gdx file(s)
 gdx_file_list = glob.glob('input/*.gdx')
 
-# create output directory
-if not os.path.isdir('output'):
-    os.mkdir('output')
-
 
 #
 # VARIABLE SPECIFICATION
@@ -54,7 +49,7 @@ if not os.path.isdir('output'):
 
 # load the variable specification table that defines which varaibles will be
 # included and the index names for each variable.
-var_specs = pd.read_csv('variable_specification.csv',
+var_specs = pd.read_csv('variable_specification_FG.csv',
                         encoding='utf8')
 
 # drop all variables that shall NOT be included and set the index to the
@@ -129,10 +124,26 @@ for varname in var_list:
     time = datetime.datetime.now().strftime('%y%m%d-%H%M')
 
     # path to excel file with the name of the variable in current iteration
+#    xlsx_file = 'output/' + pr_name + varname + '_' + time + '.xlsx'
     csv_file = 'output/' + pr_name + varname + '_' + time + '.csv'
 
-    # write the data to a csv file
+    # create a pandas excel writer
+#    writer = pd.ExcelWriter(xlsx_file,
+#                            engine='openpyxl',
+#                            write_only=True)
+
+#    # the following block doesn't work, excel files aren't populated with data
+#    writer = pd.ExcelWriter(xlsx_file,
+#                            engine='xlsxwriter',
+#                            options={'constant_memory': True})
+
+    # convert the dataframe to an excel object
+#    data.to_excel(writer, sheet_name=varname)
     data.to_csv(csv_file, encoding='utf8', index=False)
+
+    # close the pandas excel writer and output the excel file.
+#    writer.save()
+#    writer.close()
 
 
 # print final statement
