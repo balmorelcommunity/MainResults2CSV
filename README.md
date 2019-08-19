@@ -1,4 +1,4 @@
-# mainresults_converter
+# MainResults2CSV
 
 This application converts one ore more MainResults.gdx files produced by Balmorel to comma seperated values (csv) files.
 
