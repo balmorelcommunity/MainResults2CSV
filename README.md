@@ -39,20 +39,24 @@ The following software is needed to run the script:
 
 1. Set the path to the local gams installation and the project name in the config.py file.
 	> Example: C:/GAMS/win64/28.1
+	>
 	> The project name is only used to name the output csv files.
 2. Place all gdx files you want to merge in the input directory in the project folder
-	> mainresults_2_csv/input
+	> MainResults2CSV/input
 3. The scenario name for each gdx file has to by set directly in the gdx file name by the text in between "MainResults_" and ".gdx"
 	> Example: MainResults_"SCENARIONAME_1".gdx
 4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc.
 	> File format: csv
+	>
 	> Encoding: utf8
+	>
 	> Only include variables, that exist in all gdx files! Else, it will cause an error.
+	>
 	> Save the changes.
-5. Activate the environment in th eanaconda prompt:
+5. Activate the environment in the anaconda prompt:
 	> Run: activate gdx
 6. Navigate to project folder with the "cd" command (use the tab key to suggest folders after each /)
-	> Example: cd Desktop/projects/mainresults_converter
+	> Example: cd Desktop/projects/MainResults2CSV
 7. Excecute the script:
 	> run: python gdx2csv.py
 8. All csv files for each variable are now in the output folder.
