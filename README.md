@@ -15,6 +15,7 @@ The following software is needed to run the script:
 
 ### programming languages
 - python 3.6
+- Local GAMS installation, tested with versions 24.9 and 28.1
 
 ### side packages
 - gdxpds
