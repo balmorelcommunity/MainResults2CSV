@@ -26,13 +26,13 @@ The following software is needed to run the script:
 ## Installation
 
 ### With Anaconda
-- Install anaconda/miniconda with python 3.7 (https://docs.conda.io/en/latest/miniconda.html)
+- Install anaconda/miniconda with python 3.7 [(get mini conda here)](https://docs.conda.io/en/latest/miniconda.html)
 - Open the anaconda promt
 - Navigate to the mainresults_2_gdx folder using the "cd" command and the "tab" key.
-- Create a new environment from the environment.yml file [conda instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+- Create a new environment from the environment.yml file [(see conda instructions here)](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
 	> Run: conda env create -f environment.yml
 
-### pip
+### With PIP
 - to be filled, not tested...
 
 
@@ -48,12 +48,12 @@ The following software is needed to run the script:
 	
 3. The scenario name for each gdx file has to by set directly in the gdx file name by the text in between "MainResults_" and ".gdx"
 	> Example: MainResults_"SCENARIONAME_1".gdx
-4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc.
+4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc. The indix names will then be renamed to the header names of the csv file.
 	> File format: csv
 	>
 	> Encoding: utf8
 	>
-	> Only include variables, that exist in all gdx files! Else, it will cause an error.
+	> Assure that each variable name, which occures in __more than one__ gdx file, is defined over the same indices as in the OUTPUT_SUMMARY.inc and variable specification.csv files.
 	>
 	> Save the changes.
 	
