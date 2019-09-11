@@ -115,7 +115,6 @@ dependencies:
   - wincertstore=0.2=py36_1002
   - wrapt=1.11.2=py36hfa6e2cd_0
   - zeromq=4.3.2=h6538335_2
-  - zlib=1.2.11=h2fa13f4_1005
   - pip:
     - future==0.17.1
     - gdxcc==7.post2492
