@@ -75,7 +75,7 @@ var_list = var_specs.index
 # files and write it to an excel file
 for varname in var_list:
 
-    """ loop through the variable list and creat an empty dataframe in each
+    """ loop through the variable list and create an empty dataframe in each
     iteration.
     """
 
