@@ -46,7 +46,7 @@ The following software is needed to run the script:
 2. Place all gdx files you want to merge in the input directory in the project folder
 	> MainResults2CSV/input
 	
-3. The scenario name for each gdx file has to by set directly in the gdx file name by the text in between "MainResults_" and ".gdx"
+3. The scenario name for each gdx file has to be set directly in the gdx file name by the text in between "MainResults_" and ".gdx"
 	> Example: MainResults_"SCENARIONAME_1".gdx
 4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc. The indix names will then be renamed to the header names of the csv file.
 	> File format: csv
