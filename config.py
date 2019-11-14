@@ -9,12 +9,14 @@ Here the user can define global settings and variables.
 """
 
 # path to the local gams installation
-local_gams = 'C:/GAMS/win64/28.1'
+local_gams = 'C:/GAMS/win64/28.2'
 print('GAMS installation: ' + local_gams)
 
 # project name (if no project name shall be specifified put only '')
-project_name = ''
+project_name = 'peakapp'
 if project_name:
+    print(project_name)
     project_name += '_'
 else:
     print('No project name defined. See config.py settings.')
+
