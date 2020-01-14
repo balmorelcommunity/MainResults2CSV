@@ -7,6 +7,8 @@ Created on Fri Aug  9 13:20:57 2019
 Based on previous work by Elaine T. Hale (https://pypi.org/project/gdxpds/) and
 Philipp Andreas Gunkel (DTU).
 
+Further development by Mason Scott Lester (mscle@dtu.dk)
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -34,6 +36,11 @@ import glob
 import gdxpds as gp
 import pandas as pd
 
+"""
+# Mason
+from pandas import ExcelWriter
+"""
+
 # path to the local gams installation
 gams_dir = config.local_gams
 
@@ -59,12 +66,14 @@ var_specs = pd.read_csv('variable_specification.csv',
 
 # drop all variables that shall NOT be included and set the index to the
 # variable names
-var_specs = var_specs[var_specs.include == 'YES']
-del var_specs['include']
-var_specs = var_specs.set_index('variable')
+# var_specs = var_specs[var_specs.include == 'YES']
+# del var_specs['include']
+# var_specs = var_specs.set_index('variable')
 
-# list of all variable names
-var_list = var_specs.index
+# list of all variable names for csv
+# var_list = var_specs.index
+var_csv_list = var_specs.loc[var_specs.csv == 'YES', 'variable'].tolist()
+var_xls_list = var_specs.loc[var_specs.xls == 'YES', 'variable'].tolist()
 
 
 #
@@ -73,7 +82,7 @@ var_list = var_specs.index
 
 # create for each variable a dataframe that merges the variable data of all gdx
 # files and write it to an excel file
-for varname in var_list:
+for varname in var_csv_list:
 
     """ loop through the variable list and create an empty dataframe in each
     iteration.
@@ -134,9 +143,32 @@ for varname in var_list:
     # write the data to a csv file
     data.to_csv(csv_file, encoding='utf8', index=False)
 
+"""
+# Mason
+def askYesNoQuestion(question):
+  YesNoAnswer = input(question).upper()
+  if YesNoAnswer == "YES" or YesNoAnswer == "NO":
+     return YesNoAnswer  
+  else:
+     return askYesNoQuestion(question)
+ 
+answer = askYesNoQuestion("Do you want to merge CSV files to excel workbook (Yes or No)?")
+if answer == "YES":
+    print("Merging...")
+    writer = ExcelWriter('output/MainResults.xlsx')
+
+    for filename in glob.glob('output/*.csv'):
+        df_csv = pd.read_csv(filename)
+
+        (_, f_name) = os.path.split(filename)
+        (f_shortname, _) = os.path.splitext(f_name)
+
+        #df_csv.to_excel(writer, varname, index=False)
+        df_csv.to_excel(writer, f_shortname, index=False)
+    writer.save()
 
 # print final statement
 print('End of execution.')
-
+"""
 
 # = END =======================================================================

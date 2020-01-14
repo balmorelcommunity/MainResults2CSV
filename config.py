@@ -13,7 +13,7 @@ local_gams = 'C:/GAMS/win64/28.2'
 print('GAMS installation: ' + local_gams)
 
 # project name (if no project name shall be specifified put only '')
-project_name = 'peakapp'
+project_name = 'open_modex'
 if project_name:
     print(project_name)
     project_name += '_'
