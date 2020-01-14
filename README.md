@@ -25,16 +25,12 @@ The following software is needed to run the script:
 
 ## Installation
 
-### With Anaconda
+With anaconda
 - Install anaconda/miniconda with python 3.7 [(get mini conda here)](https://docs.conda.io/en/latest/miniconda.html)
-- Open the anaconda promt
+- Open the anaconda prompt
 - Navigate to the project folder using the "cd" command and the "tab" key and enter it.
 - Create a new environment from the environment.yml file [(see conda instructions here)](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
 	> Run: conda env create -f environment.yml
-
-### With PIP
-- to be filled, not tested...
-
 
 ## Execution
 
