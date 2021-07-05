@@ -9,7 +9,7 @@ Here the user can define global settings and variables.
 """
 
 # path to the local gams installation
-local_gams = 'C:/GAMS/win64/28.2'
+local_gams = 'C:/GAMS/win64/33.1'
 print('GAMS installation: ' + local_gams)
 
 # project name (if no project name shall be specifified put only '')
