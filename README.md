@@ -15,7 +15,7 @@ The following software is needed to run the script:
 
 ### programming languages
 - python 3.6
-- Local GAMS installation, tested with versions 24.9, 28.1 and 28.2
+- Local GAMS installation, tested with versions 24.9, 28.1, 33.1
 
 ### side packages
 - gdxpds
@@ -44,7 +44,7 @@ With anaconda
 	
 3. The scenario name for each gdx file has to be set directly in the gdx file name by the text in between "MainResults_" and ".gdx"
 	> Example: MainResults_"SCENARIONAME_1".gdx
-4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc. The indix names will then be renamed to the header names of the csv file.
+4. Set in the "variable_specification.csv" in the project folder the variables, which shall be included and put TRUE for the indices over which these variables are defined in the OUTPUT_SUMMARY.inc. The index names will then be renamed to the header names of the csv file.
 	> File format: csv
 	>
 	> Encoding: utf8
@@ -56,7 +56,7 @@ With anaconda
 5. Activate the environment in the anaconda prompt:
 	> Run: activate gdx
 	
-6. Navigate to project folder with the "cd" command (use the tab key to suggest folders after each /)
+6. Navigate to project folder with the "cd" command (use the tab key after each /)
 	> Example: cd Desktop/projects/MainResults2CSV
 	
 7. Excecute the script:
@@ -72,12 +72,12 @@ With anaconda
 
 ## Authors
 
-* **[tilseb](mailto:tilseb@dtu.dk)** - *Initial work*
+* **[tilseb](mailto:till@energymodellinglab.com)** - *Initial work*
 
 
 ## License
 
-This project is licensed under the GNU General Public License vers. 3 or later - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU General Public License vers. 3 or later - see the [LICENSE.md](LICENSE.md) file for details.
 
 
 ## Acknowledgments
